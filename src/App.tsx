@@ -1,26 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-
+import { Flowers } from './shared/components/flowers/Flower.component';
+import { Menu } from './shared/components/menu/Menu.component';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { HumanBodyComponent } from './shared/components/human-body/human-body.component';
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div>
+            <HumanBodyComponent />
+
+            <Router>
+                <Switch>
+                    <Route path="/about">
+                        <Flowers />
+                    </Route>
+                </Switch>
+            </Router>
+        </div>
+    );
 }
 
 export default App;

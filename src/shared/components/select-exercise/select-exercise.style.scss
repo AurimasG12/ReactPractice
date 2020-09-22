@@ -1,0 +1,15 @@
+.selector {
+    display: grid;
+    grid-template-columns: 1;
+    grid-row-gap: 10px;
+    .ant-select {
+        width: 100%;
+    }
+    .input {
+        display: flex;
+        flex-direction: row;
+        p {
+            margin-right: 10px;
+        }
+    }
+}

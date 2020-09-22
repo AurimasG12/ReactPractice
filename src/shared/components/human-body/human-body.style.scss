@@ -1,0 +1,10 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, calc(50% - 20px));
+    grid-column-gap: 40px;
+    div {
+        h3 {
+            text-align: center;
+        }
+    }
+}
